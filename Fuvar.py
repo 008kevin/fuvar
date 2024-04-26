@@ -15,3 +15,5 @@ for line in f:
     line = line.strip().strip(';')
     fuvarList.append(Fuvar(line[0],line[1],line[2],line[3],line[4],line[5],line[6]))
 f.close()
+
+print(f"3. feladat: {len(fuvarList)} fuvar")

@@ -25,3 +25,13 @@ for fuvar in fuvarList:
         fuvarCount += 1
         incomeCounter += fuvar.price + fuvar.tip
 print(f"4. feladat: {fuvarCount} fuvar alatt: {str(incomeCounter).replace('.',',')}$")
+
+paymentStat = {}
+for fuvar in fuvarList:
+    if fuvar.paymentType in paymentStat.keys():
+        paymentStat[fuvar.paymentType] += 1
+    else:
+        paymentStat[fuvar.paymentType] = 1
+print("5. feladat")
+for k,v in paymentStat.items():
+    print(f'\t{k}: {v} fuvar')
